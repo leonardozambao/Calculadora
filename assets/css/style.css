@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  list-style: none;
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.middle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.body {
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.content {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+header {
+  border-bottom: solid 1px #181616;
+  padding: 15px 0;
+}
+
+header h1 {
+  color: #181616;
+}
+
+section .content {
+  max-width: 640px;
+}
+
+section form label input {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 1px #181616;
+  padding: 5px 10px;
+  outline: none;
+  margin: 10px 0;
+}
+
+section form input[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 1px #181616;
+  background-color: #181616;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+section form input[type="submit"]:hover {
+  background-color: #fff;
+  color: #181616;
+}
+
+section form table {
+  width: 100%;
+  margin: 15px 0;
+}
+
+section form table thead tr th {
+  background-color: #fff;
+}
+
+section form table tr td, section form table tr th {
+  padding: 5px 10px;
+}
+
+section form table tr td:first-child, section form table tr th:first-child {
+  text-align: left;
+}
+
+section form table tr td:last-child, section form table tr th:last-child {
+  text-align: right;
+}
+
+section form table tr:nth-child(even) td, section form table tr:nth-child(even) th {
+  background-color: #fff;
+}
+
+footer {
+  border-top: solid 1px #181616;
+  padding: 15px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 18px;
+  color: #181616;
+}
+
+@media only screen and (max-width: 480px) {
+  footer p {
+    font-size: 13px;
+  }
+  section form table tr td, section form table tr th {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+@mixin square($size){
+    width: $size;
+    height: $size;;
+}
+$grey : #f4f6f8;
+$smoothblack : rgb(24, 22, 22);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    list-style: none;
+    text-decoration: none;
+}
+.flex{display: flex;}
+.between{justify-content: space-between;}
+.around{justify-content: space-around;}
+.center{justify-content: center;}
+.middle{align-items: center;}
+.column{flex-direction: column;}
+.wrap{flex-wrap: wrap;}
+
+.body{
+    min-height: 100vh;background-color: $grey;
+}
+.content{
+    width: 100%;max-width: 1180px;margin: 0 auto;padding: 0 5%;
+}
+header{
+    border-bottom: solid 1px $smoothblack;padding: 15px 0;
+    h1{
+        color: $smoothblack;
+    }
+}
+section{
+    .content{
+        max-width: 640px;
+    }
+    form{
+        label{
+            input{
+                display: block;appearance: none;border: solid 1px $smoothblack;padding: 5px 10px;outline: none;margin: 10px 0;
+            }
+        }
+        input[type="submit"]{
+            appearance: none;border: solid 1px $smoothblack;background-color: $smoothblack;color: #fff;padding: 5px 10px;
+            &:hover{
+                background-color: #fff;color: $smoothblack;
+            }
+        }
+        table{
+            thead{
+                tr{
+                    th{
+                        background-color: #fff;
+                    }
+                }
+            }
+            width: 100%;
+            margin: 15px 0;
+            tr{
+                td,th{
+                    padding: 5px 10px;
+                    &:first-child{
+                        text-align: left;
+                    }
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+                &:nth-child(even){
+                    td,th{
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    border-top: solid 1px $smoothblack;padding: 15px;
+    p{
+        text-align: center;font-size: 18px;color: $smoothblack;
+    }
+}
+@media only screen and (max-width: 480px){
+    footer{
+        p{
+            font-size: 13px;
+        }
+    }
+    section{
+        form{
+            table{
+                tr{
+                    td,th{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

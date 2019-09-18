@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable = 0, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora IP</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div class="flex column between body">
+    <header>
+        <div class="content">
+            <h1>Calculadora de IP</h1>
+        </div>
+    </header>
+    <section>
+        <div class="content">
+            <form name="calculadora" onsubmit="Calc(); return false;">
+                <div class="row flex between wrap">
+                    <label for="submask">
+                        Máscara de rede ou CIDR
+                        <input class="" type="text" name="submask" placeholder="255.255.255.0 ou 30 " />
+                    </label>
+                    <label for="ip">
+                        Endereço IP
+                        <input class="" type="text" name="ip" placeholder="192.168.1.1" />
+                    </label>
+                </div>
+                <input class="" type="submit" value="Calcular" />
+                <div class="" id="info">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <thead id="thead">
+                            <tr>
+                                <th class="">ID</th>
+                                <th class="">RESULTADOS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <tr>
+                                <td class="">CIDR</td>
+                                <td class="" id="tablecidr"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Máscara de rede</td>
+                                <td class="" id="tablesubmask"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Número de hosts</td>
+                                <td class="" id="tablenumhosts"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Quantidade de grupos</td>
+                                <td id="tablenumgrupos"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Classe de IP</td>
+                                <td class="" id="tableipclass"></td>
+                            </tr>
+                            <tr>
+                                <td class="">IP de rede</td>
+                                <td class="" id="tablenetworkid"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Broadcast</td>
+                                <td class="" id="tablebroadcastaddress"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Host Inicial</td>
+                                <td class="" id="tablenetworkinicial"></td>
+                            </tr>
+                            <tr>
+                                <td class="">Host Final</td>
+                                <td class="" id="tablenetworkfinal"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>Leonardo Zambão | Hugo Santos | 2019</p>
+    </footer>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
